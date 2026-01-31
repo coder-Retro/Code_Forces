@@ -1,21 +1,31 @@
 #include<stdio.h>
+
+// Function Declaration
+int solution(const char *ptr,int number);
+
+// Main Function
 int main()
 {
     int x=0,ops;
     scanf("%d",&ops);
+    char arr[4];
     if(ops>=1&&ops<=150)
     {
-        char arr[ops][3];
-        for(int i=0;i<ops;i++)
-            arr[i][1]=0;
         for(int i=0;i<ops;i++)
         {
-            scanf("%s",arr[i]);
-            if(arr[i][1]=='+')
-                x++;
-            else
-                x--;
+            scanf("%s",arr);
+            x=solution(arr,x);
         }
         printf("%d",x);
     }
+    return 0;
+}
+
+// Function Definition
+int solution(const char *ptr,int number)
+{
+    if(ptr[1]=='+')
+        return number+1;
+    else
+        return number-1;
 }
