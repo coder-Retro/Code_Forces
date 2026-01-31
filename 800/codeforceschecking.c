@@ -24,8 +24,8 @@ int main()
 // Function Definition
 bool solution(const char test)
 {
-    char arr[]="codeforces";
-    for(int i=0;i<10;i++)
+    const char arr[]="codeforces";
+    for(int i=0;arr[i]!='\0';i++)
     {
         if(test==arr[i])
             return true;
