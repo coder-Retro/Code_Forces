@@ -24,9 +24,8 @@ int main()
 int solution(const int a,const int b)
 {
     int moves=0;
-    moves=(a-b);
+    moves=(a-b)/10;
     if(moves<0) moves*=(-1);
-    moves=moves/10;
     if((a-b)%10!=0) moves++;
     return moves;
 }
