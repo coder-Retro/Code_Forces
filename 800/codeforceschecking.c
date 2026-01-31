@@ -27,7 +27,7 @@ bool solution(const char *test)
     char arr[]="codeforces";
     for(int i=0;i<10;i++)
     {
-        iftest==arr[i])
+        if(*test==arr[i])
             return true;
     }
     return false;
