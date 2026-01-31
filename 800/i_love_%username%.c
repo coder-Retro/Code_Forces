@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 // Function Declarations
-int solution(int arr[],int size);
+int solution(const int *arr,const int size);
 
 // Main Function
 int main()
@@ -17,7 +17,7 @@ int main()
 }
 
 // Function Definitions
-int solution(int arr[],int size)
+int solution(const int *arr,const int size)
 {
     int answer=0;
     int min=arr[0],max=arr[0];
