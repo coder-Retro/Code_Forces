@@ -2,7 +2,7 @@
 #include<stdbool.h>
 
 // Function Declaration
-bool solution(const char *test);
+bool solution(const char test);
 
 // Main Function
 int main()
@@ -14,7 +14,7 @@ int main()
     for(int i=0;i<cases;i++)
     {
         scanf(" %c",&current);
-        ans[i]=solution(&current);
+        ans[i]=solution(current);
     }
     for(int i=0;i<cases;i++)
         printf("%s\n",(ans[i]==true)?"YES":"NO");
@@ -22,12 +22,12 @@ int main()
 }
 
 // Function Definition
-bool solution(const char *test)
+bool solution(const char test)
 {
     char arr[]="codeforces";
     for(int i=0;i<10;i++)
     {
-        if(*test==arr[i])
+        if(test==arr[i])
             return true;
     }
     return false;
