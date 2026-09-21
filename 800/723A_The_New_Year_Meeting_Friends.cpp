@@ -7,9 +7,8 @@ using namespace std;
 
 class Solution {
 public:
-    int minDistance(vector<int>& ps) {
+    int minDistance(const vector<int>& ps) {
         int minDis=INT_MAX;
-        sort(ps.begin(),ps.end());
         int a=ps[0],b=ps[1],c=ps[2];
         for(int i=a;i<=c;i++) {
             int currDis=abs(i-a)+abs(i-b)+abs(i-c);
@@ -23,6 +22,7 @@ int main() {
     Solution obj;
     vector<int> points(3);
     cin>>points[0]>>points[1]>>points[2];
+    sort(points.begin(),points.end());
     cout<<obj.minDistance(points);
     return 0;
 }
