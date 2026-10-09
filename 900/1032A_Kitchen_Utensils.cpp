@@ -12,7 +12,7 @@ int solve(int n,int k,const vector<int>& uten) {
         freq[i-1]++;
         maxFreq=max(maxFreq,freq[i-1]);
     }
-    int dishes=maxFreq/k;gi
+    int dishes=maxFreq/k;
     if(maxFreq%k) dishes++;
     int total_utensils=dishes*k*distinct;
     return total_utensils-n;
